@@ -1,0 +1,56 @@
+#items-container {
+  ul#items {
+    li {
+      font-size: 1.5em;
+      transition: all 0.3s ease-in;
+
+      &.done {
+        opacity: 0.6;
+      }
+
+      i.check {
+        width: 1.2em;
+        font-size: 0.85em;
+        cursor: pointer;
+      }
+
+      i.fa-trash-o {
+        display: inline-block;
+        margin-top: 0.15em;
+      }
+
+      .title {
+        text-decoration: none;
+        transition: text-decoration 0.3s ease-in;
+      }
+
+      &.done .title {
+        text-decoration: line-through;
+      }
+    }
+
+    li.ng-enter {
+      opacity:0;
+      transform: translateY(100%);
+    }
+
+    li.ng-enter.ng-enter-active {
+      opacity:1;
+      transform: translateY(0);
+    }
+
+    li.ng-leave {
+      opacity:1;
+      transform: translateX(0);
+    }
+
+    li.ng-leave.ng-leave-active {
+      opacity:0;
+      transform: translateX(100%);
+    }
+  }
+
+  form .form-group {
+    margin-bottom: 0;
+  }
+}
