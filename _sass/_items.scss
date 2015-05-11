@@ -1,4 +1,9 @@
 #items-container {
+  #itemsLoading {
+    text-align: center;
+    font-size: 1.5em;
+  }
+
   ul#items {
     li {
       font-size: 1.5em;
@@ -17,6 +22,7 @@
       i.fa-trash-o {
         display: inline-block;
         margin-top: 0.15em;
+        cursor: pointer;
       }
 
       .title {

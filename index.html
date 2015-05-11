@@ -11,6 +11,9 @@
 <body ng-app="myList">
   <div id="items-container" class="container" ng-controller="ItemController">
     <h1>My List</h1>
+    <div id="itemsLoading" class="well">
+      <i class="fa fa-spinner fa-pulse"></i> Loading
+    </div>
     <ul id="items" class="list-group">
       <li ng-repeat="item in items" ng-class="item.done ? 'list-group-item done' : 'list-group-item'">
         <i class="fa fa-trash-o pull-right" ng-click="deleteItem(item)"></i>
@@ -27,20 +30,6 @@
           <button type="submit" class="btn btn-primary">Add Item</button>
         </div>
       </div>
-  </div>
-
-  <div style="display:none" class="error">
-    Looks like there was a problem saving the test object. Make sure you've set your application ID and javascript key correctly in the call to <code>Parse.initialize</code> in this file.
-  </div>
-
-  <div style="display:none" class="success">
-    <p>We've also just created your first object using the following code:</p>
-    
-      <code>
-        var TestObject = Parse.Object.extend("TestObject");<br/>
-        var testObject = new TestObject();<br/>
-        testObject.save({foo: "bar"});
-      </code>
   </div>
 
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
